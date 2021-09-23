@@ -8,9 +8,12 @@
     font-family: var(--abel);
 }
 :root{
+    /*color themes*/
     --textColor:#797911;
+    --textGray:#999999;
     --boxShadow:#e3e3e3;
     --normatText:#3e3e3e;
+    /*font style themes*/
     --abel:Abel;
     --anton:Anton;
     --josefin:Josefin;
@@ -125,9 +128,22 @@ header .navBrand a img{
     justify-content: space-between;
     padding:0.5rem 2rem;
 }
+.copyright p{
+    letter-spacing: 0.5px;
+    
+    
+} .copyright a:hover{
+    text-decoration: underline;
+}
+ .copyright a{
+    font-weight: 700;
+    color:var(--textGray);
+    letter-spacing: 0.5px;
+
+}
 .copyright p, .copyright a{
     font-size-adjust: auto;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
  /*MEDIA QUERY*/
@@ -173,7 +189,6 @@ header .navBrand a img{
         display: none;
         position: absolute;
         bottom: 0px;
-        /* top: 30px; */
         left: 65px;
         background-color: #ffffff;
         color:#000000;
@@ -181,7 +196,7 @@ header .navBrand a img{
         border-radius: 4px;
     }
     header .nav .navItems ul li span::before {
-        content: '';
+    content: '';
     position: absolute;
     background-color: #ffffff;
     width: 10px;
@@ -222,22 +237,22 @@ header .navBrand a img{
         margin-bottom: 10px;
          border-top: 5px solid black;
         }
-     header .nav .toggle{
-        font-size: 2rem;
-        display: initial;
-    }
-    header.active{
-        padding-right:0;
-        overflow-y:scroll !important;
-        box-shadow: none;
-        border:none;
-        align-items: flex-start;
-    }
-     header .nav .toggle.active{
-        position:absolute;
-        top:0;
-        color:var(--normatText);
-        right:20px;
+        header.active{
+            padding-right:0;
+            overflow-y:scroll !important;
+            box-shadow: none;
+            border:none;
+            align-items: flex-start;
+        }
+        header .nav .toggle{
+           font-size: 2rem;
+           display: initial;
+       }
+    header .nav .toggle.active {
+        position: absolute;
+        top: 13px;
+        color: var(--normatText);
+        right: 20px;
     }
 
 
@@ -252,4 +267,11 @@ header .navBrand a img{
     nav .toggle i{
         padding-top:0 ;
     }
+    .copyright{
+        
+        flex-direction: column;
+        
+        padding:0.1rem 2rem;
+    }
+   
  }
