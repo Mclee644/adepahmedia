@@ -11,6 +11,7 @@ if (app.onscroll) {
 if (app.onscroll) {
     nav.style.backgroundColor='#fff';
 };
+/// like dis
 
 
 function sideMenu(){
