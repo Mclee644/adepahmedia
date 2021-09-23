@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+:root{
+    --textColor:#797911;
+    --boxShadow:#e3e3e3;
+    --normatText:#3e3e3e;
+}
+
+body{
+    overflow-x: hidden;
+    
+}
+ul li{
+    list-style: none;
+} 
+a{
+    text-decoration: none;
+}
+
+     /*special close button*/
+     .fa-close.active:before {
+        content: "\f0c8";
+    }
+body .root{
+width: 100%;
+min-height:100vh;
+}
+
+body .root .app{
+    width:100%;
+    color:var(--boxShadow);
+}
+header {
+    background-color: transparent;
+    display: flex;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    width:100%;
+    padding: 0 1rem; 
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4vh;
+    box-shadow: -20px 5px 9px rgb(0 0 0 / 20%);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+header .navBrand {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;}
+
+header .navBrand a img{
+    height:60px;
+    width:60px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+ body .root .app .nav{
+   display:flex;
+   justify-content:flex-end;
+   width:70%;
+   align-items: center;
+   
+ }
+   .nav .navItems ul{
+      display:flex;
+      justify-content: space-between;
+      
+    }
+    header .nav .navItems ul li{
+        padding:0 50px;
+        color:var(--normatText);
+        font-size:1.3rem;
+    }
+    header .nav .navItems ul li a{
+        color:#ffffff;
+    }
+    /*toggle button*/
+    header .nav .toggle{
+        font-size: 2rem;
+        display: none;
+    }
+
+
+ /*background stylings*/
+.siteTitle{
+    height: 100vh;
+    background:url(../assets/unsplash/ben-kolde-bs2Ba7t69mM-unsplash.jpg);
+    background-size: cover;
+    width:100%;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position:relative;
+    
+}
+
+.siteTitle::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100vh;
+    background-color:#000000;
+    opacity:0.3;
+    z-index: -1;
+}
+
+ /*MEDIA QUERY*/
+
+ @media only screen and (max-width:991px){
+   
+    header .nav .navItems ul li span {
+        display: none;
+        position: absolute;
+        bottom:-35px;
+        left:15px;
+        background-color:#ffffff;
+        color:#000000;
+        border-radius: 4px;
+    }
+    header .nav .navItems ul li span::before {
+        content:'';
+        position:absolute;
+        background-color:#ffffff;
+        width:10px;
+        bottom:30px;
+        z-index: -1;
+        left:20px;
+        height:10px;
+        transform:translateY(5px) rotate(45deg);
+    }
+    header .nav .navItems ul li:hover span {
+        display: initial;
+    }
+    header .nav .navItems ul li{
+        padding:0 30px;
+        color:var(--normatText);
+        font-size:1.3rem;
+        position:relative;
+    }
+ }
+ @media only screen and (max-width:768px){
+     /*special close button*/
+.fa-close:before {
+    content: "\f0c4";
+}
+    header .nav .navItems ul li span {
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        /* top: 30px; */
+        left: 65px;
+        background-color: #ffffff;
+        color:#000000;
+        padding:0.9px;
+        border-radius: 4px;
+    }
+    header .nav .navItems ul li span::before {
+        content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 10px;
+    top: 5px;
+    /* bottom: 30px; */
+    z-index: -1;
+    left: -5px;
+    height: 10px;
+    transform: translateY(5px) rotate(
+45deg
+);
+    }
+    header .nav .navItems ul li:hover span {
+        display: initial;
+    }
+    header .nav .navItems ul li {
+
+        margin: 10px 0;
+    }
+
+    .nav .navItems{
+        display: none;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease;
+        transition-delay: 2.5s;
+     }
+     .nav .navItems.active{
+         display: initial;
+         width:200px;
+         height:60vh;
+         background-color:rgba(255, 255, 255, 0.747);
+         position:relative;
+        }
+    .nav .navItems.active ul{
+        flex-direction: column;
+        margin-top: 60px;
+        margin-bottom: 10px;
+         border-top: 5px solid black;
+        }
+     header .nav .toggle{
+        font-size: 2rem;
+        display: initial;
+    }
+    header.active{
+        padding-right:0;
+        overflow-y:scroll !important;
+        box-shadow: none;
+        border:none;
+        align-items: flex-start;
+    }
+     header .nav .toggle.active{
+        position:absolute;
+        top:0;
+        color:var(--normatText);
+        right:20px;
+    }
+
+
+  
+ 
+ }
+ @media only screen and (max-width:550px){
+    nav .navBrand {
+        padding: 10px 0;
+        margin: 4px 0;
+    }
+    nav .toggle i{
+        padding-top:0 ;
+    }
+ }
