@@ -1,14 +1,21 @@
+@import url(../css/fontFace.css);
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     line-height: 1.5;
     scroll-behavior: smooth;
+    font-family: var(--abel);
 }
 :root{
     --textColor:#797911;
     --boxShadow:#e3e3e3;
     --normatText:#3e3e3e;
+    --abel:Abel;
+    --anton:Anton;
+    --josefin:Josefin;
+    --lexend:Lexend;
+    --livvic:Livvic;
 }
 
 body{
@@ -111,6 +118,16 @@ header .navBrand a img{
     background-color:#000000;
     opacity:0.3;
     z-index: -1;
+}
+/*Copyright stylings-------------------------------*/
+.copyright{
+    display:flex;
+    justify-content: space-between;
+    padding:0.5rem 2rem;
+}
+.copyright p, .copyright a{
+    font-size-adjust: auto;
+    font-size: 1.2rem;
 }
 
  /*MEDIA QUERY*/
