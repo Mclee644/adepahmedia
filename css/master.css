@@ -13,6 +13,8 @@
     --textGray:#999999;
     --boxShadow:#e3e3e3;
     --normatText:#3e3e3e;
+    --white:hsl(0, 0%, 100%);
+
     /*font style themes*/
     --abel:Abel;
     --anton:Anton;
@@ -122,6 +124,59 @@ header .navBrand a img{
     opacity:0.3;
     z-index: -1;
 }
+.siteTitle .container {
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 50px 4rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.siteTitle .container .row {
+    width:600px;
+}
+.siteTitle .container .row .title{
+    display: inline-block;
+    font-size-adjust: auto;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.siteTitle .title h3{
+    font-size: 1.9rem;
+    font-family: var(--lexend);
+}
+
+.siteTitle .title h4{
+    font-family: var(--lexend);
+    font-size: 1.4rem;
+}
+.siteTitle .container .row .orders{
+    margin-top:30px;
+}
+.siteTitle .container .row .orders .btn{
+    background:transparent;
+    border:2px solid var(--textGray);
+    color:var(--white);
+    border-radius:9px;
+    padding:0.5rem 3rem;
+    font-weight: 700;
+    font-size:2rem;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    margin-left: 30px;
+    transition:1s ease;
+    transition-property:color background;
+
+
+}
+.siteTitle .container .row .orders .btn:hover{
+    background-color:var(--white);
+    color:#111111;
+}
+
 /*Copyright stylings-------------------------------*/
 .copyright{
     display:flex;
@@ -148,6 +203,14 @@ header .navBrand a img{
 
  /*MEDIA QUERY*/
 
+ @media only screen and (max-width:1312px){
+    header .nav .navItems ul li {
+        padding: 0 30px;
+    }
+    body .root .app .nav {
+        width: 80%;
+    }
+ }
  @media only screen and (max-width:991px){
    
     header .nav .navItems ul li span {
@@ -254,8 +317,26 @@ header .navBrand a img{
         color: var(--normatText);
         right: 20px;
     }
+    
+/*site title*/
+.siteTitle .container .row {
+    width:400px;
+}
+.siteTitle .title h3{
+    font-size: 1.4rem;
+    font-family: var(--lexend);
+}
 
-
+.siteTitle .title h4{
+    font-family: var(--lexend);
+    font-size: 1.1rem;
+    margin-top:5px;
+}
+.siteTitle .container .row .orders .btn{
+    font-size:1.5rem;
+    margin-left:0;
+    padding:0 2rem;
+}
   
  
  }
@@ -273,5 +354,44 @@ header .navBrand a img{
         
         padding:0.1rem 2rem;
     }
-   
+   /*site title*/
+   .siteTitle .title h3{
+    font-size: 1.4rem;
+    font-family: var(--lexend);
+}
+
+.siteTitle .title h4{
+    font-family: var(--lexend);
+    font-size: 1.1rem;
+}
+.siteTitle .container .row,.siteTitle .container{
+    width:100%;
+}
+.siteTitle .container .row .orders .btn{
+    font-size:1.5rem;
+    margin-left:0;
+    padding:0 2rem;
+}
+  
  }
+
+ @media only screen and (max-width:550px){
+ .siteTitle .container{
+    padding-left: 2.5rem;
+
+ }
+ .siteTitle .container .row,.siteTitle .container{
+    width:100%;
+}
+  /*site title*/
+  .siteTitle .title h3{
+    font-size: 1rem;
+    font-family: var(--lexend);
+}
+
+.siteTitle .title h4{
+    font-family: var(--lexend);
+    font-size: 0.8rem;
+}
+}
+
